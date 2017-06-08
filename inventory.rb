@@ -7,4 +7,10 @@ class Inventory
   def add(item)
     @stock << item
   end
+
+  def find_by(key, value)
+    @stock.find do |item|
+      item.send(key) == value
+    end
+  end
 end
