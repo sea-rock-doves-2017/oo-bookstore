@@ -17,8 +17,9 @@ describe Inventory do
     end
   end
   describe '#add' do
-    xit 'adds an item to the stock' do
-      expect{inventory.add(t_shirt)}.to change{inventory.stock}.by(1)
+    it 'adds an item to the stock' do
+      inventory.add(t_shirt)
+      expect(inventory.stock[0]).to be_a(Merchandise)
     end
   end
 end

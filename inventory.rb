@@ -3,4 +3,8 @@ class Inventory
   def initialize
     @stock = []
   end
+
+  def add(item)
+    @stock << item
+  end
 end
