@@ -8,4 +8,8 @@ class Book < Merchandise
     @isbn = args.fetch(:isbn)
     @condition = args.fetch(:condition, 'new')
   end
+
+  def damage!
+    @condition = 'DAMAGED!'
+  end
 end

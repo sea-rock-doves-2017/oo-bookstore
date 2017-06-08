@@ -37,4 +37,9 @@ describe Book do
       expect(book.condition).to eq('new')
     end
   end
+  describe '#damage!' do
+    it 'changes the condition of the book to DAMAGED!' do
+      expect{book.damage!}.to change{book.condition}.from('new').to('DAMAGED!')
+    end
+  end
 end
