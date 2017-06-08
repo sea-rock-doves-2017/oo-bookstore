@@ -34,8 +34,9 @@ describe Inventory do
   end
   xdescribe '#remove' do
   end
-  xdescribe '#damage!' do
+  describe '#damage!' do
     it 'changes the condition of a book to damaged' do
+      inventory.add(book)
       expect{inventory.damage!(2)}.to change{book.condition}.to('DAMAGED!')
     end
   end

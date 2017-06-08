@@ -13,4 +13,10 @@ class Inventory
       item.send(key) == value
     end
   end
+
+  def damage!(id)
+    book = find_by(:id, id)
+    raise 'invalid item id given' if book.class != Book
+    book.damage!
+  end
 end
